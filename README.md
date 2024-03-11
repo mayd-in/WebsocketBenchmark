@@ -1,7 +1,9 @@
 # Python Websockets Benchmark
 A simple benchmark application that compares Python Websockets and Tornado Websockets implementations.
 
-For this benchmark a generator is implemented that simulates real time stock price data. Generated data is broadcasted in 10ms intervals to the clients. Clients process this data and send buy or sell order to the server. Response of order is returned to the client by server, then client calculates latency between request and response.
+For this benchmark a generator is implemented that simulates real time stock price data. Generated data is broadcasted in 10ms intervals to the clients. Clients process this data and send buy or sell order to the server. Response of order is returned to the client by server, then client calculates latency between request and response Messages are encoded as JSON in this benchmark.
+
+Test is performed in a Ubuntu running in WSL which is powered by Intel Core i5 1240p with 16 GB of RAM. Since asynchronous features of Python is used, only one thread is used in this test.
 
 ## Prerequisites
 
